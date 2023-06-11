@@ -1,0 +1,48 @@
+<mat-card>
+  <mat-card-content class="flex justify-between">
+    <div class="flex justify-between">
+      <div>
+        <button mat-button [matMenuTriggerFor]="sortByMenu">
+          Sort By {{ sort }}
+          <mat-icon>expand_more</mat-icon>
+        </button>
+        <mat-menu #sortByMenu="matMenu">
+          <button (click)="onSortUpdated('Asc')" mat-menu-item>Asc</button>
+          <button (click)="onSortUpdated('Desc')" mat-menu-item>Desc</button>
+        </mat-menu>
+      </div>
+      <div class="flex justify-between">
+        <button mat-button [matMenuTriggerFor]="menu">
+          Show {{ itemsShowCount }}
+          <mat-icon>expand_more</mat-icon>
+        </button>
+
+        <mat-menu #menu="matMenu">
+          <button (click)="onProductupdated(12)" mat-menu-item>Sports</button>
+          <button (click)="onProductupdated(12)" mat-menu-item>Sneaker</button>
+          <button (click)="onProductupdated(12)" mat-menu-item>Cloths</button>
+          <button (click)="onProductupdated(12)" mat-menu-item>
+            Stationary
+          </button>
+        </mat-menu>
+        <div>
+            <button mat-button (click)="onColumnUpDated(1)">
+                <mat-icon>view_list</mat-icon>
+            </button>
+          </div>  
+          <div>
+            <button mat-button (click)="onColumnUpDated(3)">
+                <mat-icon>view_module</mat-icon>
+            </button>
+          </div>  
+          <div>
+            <button mat-button (click)="onColumnUpDated(4)">
+                <mat-icon>view_comfy</mat-icon>
+            </button>
+          </div>  
+      </div>
+      
+    </div>
+   
+  </mat-card-content>
+</mat-card>

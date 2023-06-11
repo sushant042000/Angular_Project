@@ -17,9 +17,15 @@ import { MatTableModule } from '@angular/material/table';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ProductsComponent } from './pages/home/componets/products/products.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { FiltersComponent } from './pages/home/componets/filters/filters.component';
+
+
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, ProductsComponent, FiltersComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -36,6 +42,7 @@ import { HeaderComponent } from './components/header/header.component';
     MatTableModule,
     MatBadgeModule,
     MatSnackBarModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent],

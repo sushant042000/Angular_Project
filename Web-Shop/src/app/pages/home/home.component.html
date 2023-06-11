@@ -1,0 +1,22 @@
+<mat-drawer-container class="min-h-full max-w-7x1 mx-auto border-x">
+  <mat-drawer mode="side" opened class="p-6">
+    <div><app-filters (showCategory)="showCategory($event)"></app-filters></div>
+  </mat-drawer>
+  <mat-drawer-content class="p-6">
+    <product-header (columnsCountChange)="columnCountChange($event)"></product-header>
+   <mat-grid-list
+   gutterSize="16"
+   [cols]="cols"
+   [rowHeight]="rowHeight"
+   >
+   <mat-grid-tile>
+
+   </mat-grid-tile>
+  
+  
+  </mat-grid-list>
+
+  {{cols}}
+  {{rowHeight}}
+  </mat-drawer-content>
+</mat-drawer-container>
